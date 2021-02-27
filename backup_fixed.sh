@@ -1,5 +1,5 @@
 #!/bin/bash
-#Script para Backup! Vai compactar com gzip.
+#Script para Backup com TAR sem compactação.
 #
 # Aqui você deve informar o nome do arquivo.
 namefile=bkparquivos
@@ -14,10 +14,10 @@ destino=/mnt
 dia=$(date +%d%m%y)
 #
 # Esta opção vai montar o nome do arquivo de backup.
-arquivo="$namefile-$dia.tar.gz"
+arquivo="$namefile-$dia.tar"
 #
 # Execução do processo de backup.
 dialog --title "BACKUP DE DADOS" --infobox "INICIANDO BACKUP!" 10 60; sleep 2
-dialog --title "BACKUP DE DADOS" --prgbox "tar -zcvpf $destino/$arquivo $origem" 30 120
+dialog --title "BACKUP DE DADOS" --prgbox "tar -cvpf $destino/$arquivo $origem" 30 120
 dialog --title "BACKUP CONCLUÍDO" --prgbox "ls -lh /mnt" 20 75; sleep 2
 clear
