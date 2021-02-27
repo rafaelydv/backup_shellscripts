@@ -1,5 +1,19 @@
 #!/bin/bash
-#Script para Backup com TAR sem compactação.
+#
+:<<COMENTARIO
+Este script destina-se para realização de Backup com comando TAR sem fazer uso
+de compactação. A compactação de dados está propensa a apresentar erros 
+além de consumir muito tempo e recurso de hardware. No entanto se deseja 
+fazer uso da compactação basta adicionar o devido parâmetro na linha 
+que contém o comando TAR. O script foi desenvolvido para não ser
+interativo, que significa que o usuário terá que editar este script
+para informar os parâmetros básico descritos abaixo. Devido a essa
+característica, seu uso é mais indicado para as rotinas de backup
+dentro de servidores onde se definine apenas uma vez os parâmetros
+de backup e este será executado indefinidas vezes pelo agendador
+de tarefas escolhido (diáriamente, semanalmente, mensalmente, etc).
+Lembre-se de que sem a compactação o espaço requerido em disco será maior.
+COMENTARIO
 #
 # Aqui você deve informar o nome do arquivo.
 namefile=bkparquivos
