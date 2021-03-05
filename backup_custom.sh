@@ -10,7 +10,7 @@ permitindo que o usuário especifique o nome do arquivo de backup gerado,
 bem como os dados a serem copiados e o local de destino onde serão salvos. 
 É indicado para situações de uso exporádico onde o caminho dos dados a serem 
 copiados e o caminho onde serão salvos muda constantemente, não sendo 
-necessário a sua alteração a cada tarefa de backup. Devido a essa 
+necessário alterar o script a cada tarefa de backup. Devido a essa 
 característica ele não é indicado para rotinas fixas de backup. 
 Lembre-se de que sem a compactação o espaço requerido em disco será maior.
 COMENTARIO
