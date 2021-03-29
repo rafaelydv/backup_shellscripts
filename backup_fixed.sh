@@ -16,13 +16,13 @@ Lembre-se de que sem a compactação o espaço requerido em disco será maior.
 COMENTARIO
 #
 # Aqui você deve informar o nome do arquivo.
-namefile=bkparquivos
+namefile=seu_arquivo
 #
 # Aqui você deve informar o caminho dos dados a serem copiados.
-origem=/raid1_wd2TB/arquivos/
+origem=/seu_diretorio/seus_dados/
 #
 # Aqui você deve informar o caminho onde o backup será salvo.
-destino=/mnt
+destino=/seu_diretorio/unidade_backup/
 #
 # Esta opção vai verificar a data e hora para acrescentar ao nome do backup feito.
 dia=$(date +%d%m%y)
@@ -30,8 +30,10 @@ dia=$(date +%d%m%y)
 # Esta opção vai montar o nome do arquivo de backup.
 arquivo="$namefile-$dia.tar"
 #
+cd $origem
+#
 # Execução do processo de backup.
 dialog --title "BACKUP DE DADOS" --infobox "INICIANDO BACKUP!" 10 60; sleep 2
-dialog --title "BACKUP DE DADOS" --prgbox "tar -cvpf $destino/$arquivo $origem" 30 120
-dialog --title "BACKUP CONCLUÍDO" --prgbox "ls -lh /mnt" 20 75; sleep 2
+dialog --title "BACKUP DE DADOS" --prgbox "tar -cvpf $destino/$arquivo *" 30 120
+dialog --title "BACKUP CONCLUÍDO" --prgbox "ls -lh $destino" 20 75; sleep 2
 clear
