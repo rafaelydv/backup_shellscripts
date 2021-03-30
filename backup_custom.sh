@@ -17,10 +17,14 @@ COMENTARIO
 #
 echo
 read -p "IFORME O NOME PARA O ARQUIVO DE BACKUP: " namefile
+echo "${namefile:?Atenção você deve informar o nome do arquivo que será criado\!}"
 echo
 read -p "INFORME UM DIRETÓRIO PARA FAZER O BACKUP: " origem
+echo "${origem:?Atenção você deve informar a origem do dados para backup\!}"
 echo
 read -p "INFORME UM DESTINO PARA SALVAR O BACKUP: " destino
+echo "${destino:?Atenção você deve informar o local para salvar o backup\!}"
+echo
 #
 dia=$(date +%d%m%y)
 #
