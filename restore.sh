@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 :<<COMENTARIO
 Este script foi construído para fazer a restauração de Backup 

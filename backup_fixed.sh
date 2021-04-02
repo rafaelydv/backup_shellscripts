@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 :<<COMENTARIO
 Este script destina-se para realização de Backup com comando TAR sem fazer uso
