@@ -25,7 +25,7 @@ origem=/raid1_wd2TB/arquivos/
 destino=/mnt
 #
 # Esta opção vai verificar a data e hora para acrescentar ao nome do backup feito.
-dia=$(date +%d%m%y)
+dia=$(date +%d%m%Y)
 #
 # Esta opção vai montar o nome do arquivo de backup.
 arquivo="$namefile-$dia.tar"
