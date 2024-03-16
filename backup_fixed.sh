@@ -33,7 +33,9 @@ arquivo="$namefile-$dia.tar"
 cd $origem
 #
 # Execução do processo de backup.
-dialog --title "BACKUP DE DADOS" --infobox "INICIANDO BACKUP!" 10 60; sleep 2
-dialog --title "BACKUP DE DADOS" --prgbox "tar -cvpf $destino/$arquivo *" 30 120
-dialog --title "BACKUP CONCLUÍDO" --prgbox "ls -lh $destino" 20 75; sleep 2
+echo "INICIANDO BACKUP!" ; sleep 2
+echo ""
+tar -cvpf $destino/$arquivo * &>> /var/log/$namefile-$dia.log
+echo""
+echo "BACKUP CONCLUÍDO, CONSULTE O ARQUIVO DE LOG EM /var/log/$namefile-$dia.log." ; sleep 2
 clear
